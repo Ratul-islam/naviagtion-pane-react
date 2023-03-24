@@ -1,7 +1,99 @@
 :root {
     --bg-color: #f5f4fe;
+    --nav-color: #ffffff;
+    --nav-width: clamp(9rem, 18vw, 18rem);
+    --font-color: #000000;
+    --font-size: clamp(.45em, 1vw, 1em);
+}
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@800&family=Rokkitt:wght@100;200;400;600;800;900&display=swap');
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
 }
 .App {
     background-color: var(--bg-color);
     height: 100vh;
+    padding: calc(var(--nav-width)*.2);
+    display: flex;
+}
+nav {
+    background-color: var(--nav-color);
+    display: flex;
+    flex-direction: column;
+    width: var(--nav-width);
+    justify-content: space-between;
+    border-radius: calc(var(--nav-width)*.07);
+    padding-block: calc(var(--nav-width)*.1);
+    padding-inline: calc(var(--nav-width)*.05);
+    margin-right: calc(var(--nav-width)*.2);
+}
+/* nav * {
+    margin: 0 auto;
+} */
+.links {
+    display: flex;
+    flex-direction: column;
+}
+.links a {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    width: 100%;
+    margin-top: 10px;
+    padding: calc(var(--nav-width)*.05);
+    border-radius: calc(var(--nav-width)*.02);
+
+}
+.links .active {
+    background-color: var(--bg-color);
+    color: var(--font-color);
+
+}
+
+.nav-links{
+    text-decoration: none;
+    font-weight: 600;
+    color: #737278;
+    transition: 200ms linear;
+}
+.nav-icons {
+    margin-right: 15px;
+    font-size: cla;
+}
+.light,
+.dark {
+    display: flex;
+    position: relative;
+    z-index: 1;
+    width: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+.toggle {
+    aspect-ratio: 4/1;
+    display: flex;
+    align-items: center;
+    font-size: var(--font-size);
+    background-color: var(--bg-color);
+    padding-inline: calc(var(--nav-width)*.02);
+    position: relative;
+    cursor: pointer;
+    color: var(--font-color);
+}
+.toggle-bg {
+    background-color: var(--nav-color);
+    position: absolute;
+    width: 50%;
+    height: 80%;
+    left: 2%;
+    transition: left 200ms linear;
+}
+.right-side {
+    width: 100%;
+    background-color: var(--nav-color);
+    border-radius: calc(var(--nav-width)*.07);
 }
