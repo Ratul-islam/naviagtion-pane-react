@@ -11,7 +11,7 @@ const Theme = ({change}) => {
     change(toggle)
   }
   return (
-    <div className='toggle' onClick={handleClick}> 
+    <div className='toggle' data-state='false' onClick={handleClick}> 
       <div className="toggle-bg"></div>
       <div className="light">
         <BsSun />

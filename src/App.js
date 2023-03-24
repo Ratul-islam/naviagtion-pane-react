@@ -12,10 +12,10 @@ import Error from './pages/Error';
 function App() {
   
   const root = document.querySelector(':root');
-  const followUpDiv = document.getElementsByClassName('toggle-bg')[0];
-  console.log(followUpDiv)
+  // console.log(followUpDiv)
 
   const toggleChange =(change)=> {
+    var followUpDiv = document.getElementsByClassName('toggle-bg')[0];
       if(change){
         root.style.setProperty('--bg-color', '#f5f4fe');
         root.style.setProperty('--nav-color', '#ffffff');
